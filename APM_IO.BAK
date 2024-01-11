@@ -1,0 +1,18 @@
+#include <iostream.h>
+#include "APM_IO.H"
+
+int createDirIfNotExist(char* DirName) { // Returns 1 if exists, 0 if not
+  struct stat cs;
+  if(stat(DirName, &cs) == 0) {
+    return 1; // Exists
+  }
+  else {
+    char* full_text;
+    full_text = (char*)malloc(strlen(DirName)+strlen(DirName)+1);
+    strcpy(full_text, "md");
+    strcat(full_text, DirName);
+    system(full_text);
+    return 0; // Not exist
+  }
+  return 2;
+}
