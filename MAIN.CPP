@@ -34,22 +34,21 @@ int main(int argc, char *argv[])
   cin >> appNum;
   if(appNum == 1) {
     //Edit app
-    runProc("edit");
+    runProg("edit");
     system("cls"); // Due to weirdness with screen clearinigg
     main(0, 0);
     return 0;
   }
   if(appNum == 2) {
     //Turbo C++
-    runProc("tc");
+    runProg("tc");
     system("cls"); // Due to weirdness with screen clearinigg
     main(0, 0);
     return 0;
   }
   if(appNum == 3) {
     //QBasic
-    runProc("qbasic");
-    system("cls"); // Due to weirdness with screen clearinigg
+    runProg("qbasic");
     main(0, 0);
     return 0;
   }
