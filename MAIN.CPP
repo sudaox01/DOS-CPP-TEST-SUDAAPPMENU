@@ -35,14 +35,12 @@ int main(int argc, char *argv[])
   if(appNum == 1) {
     //Edit app
     runProg("edit");
-    system("cls"); // Due to weirdness with screen clearinigg
     main(0, 0);
     return 0;
   }
   if(appNum == 2) {
     //Turbo C++
     runProg("tc");
-    system("cls"); // Due to weirdness with screen clearinigg
     main(0, 0);
     return 0;
   }
