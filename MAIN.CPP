@@ -9,6 +9,7 @@
 #include "SETTINGS.H"
 #include "PROGRUN.H"
 #include "CONSOLE.H"
+#include "ERROR.H"
 
 int main(int argc, char *argv[])
 {
