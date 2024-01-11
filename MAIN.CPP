@@ -6,6 +6,7 @@
 #include <sys/stat.h>
 #include "APM_IO.H"
 #include "ABOUT.H"
+#include "SETTINGS.H"
 #include "PROGRUN.H"
 #include "CONSOLE.H"
 
@@ -18,7 +19,6 @@ int main(int argc, char *argv[])
   createConfigIfNotExist(motd_conf_name);
   //mkdir(dir_name);
   int appNum;
-  int siNum;
   system("cls");
   clearCon();
   printf("Suda's App Menu\r\n");
@@ -55,25 +55,9 @@ int main(int argc, char *argv[])
   }
   if(appNum == 8) {
     //Settings and Info
-    clearCon();
-    printf("===== Settings & Info =====\r\n");
-    printf("Enter a menu option\r\n");
-    printf("0. Back\r\n");
-    printf("1. About\r\n");
-    cin >> siNum;
-    if(siNum == 0) {
-      // Back
-      main(0, 0);
-      return 0;
-    }
-    if(siNum == 1) {
-      // About
-      system("cls");
-      aboutPagePrint();
-      main(0, 0);
-      return 0;
-    }
-    return 0; // For now, make it repeat eventually, todo
+    settingsPagePrint();
+    main(0, 0);
+    return 0;
   }
   if(appNum == 9) {
     //Exit
