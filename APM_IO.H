@@ -11,5 +11,6 @@
 int createDirIfNotExist(char* DirName);
 int createConfigIfNotExist(char* FileName);
 char* readFile(char* FileName);
+char* readMotd();
 
 #endif

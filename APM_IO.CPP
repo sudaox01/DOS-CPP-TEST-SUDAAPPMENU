@@ -45,3 +45,7 @@ char* readFile(char* FileName) {
     strcat(full_text, FileName);
     runProc(full_text);
 }
+
+char* readMotd() {
+  return readFile("conf/motd.txt");
+}

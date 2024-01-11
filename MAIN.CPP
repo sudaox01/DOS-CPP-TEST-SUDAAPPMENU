@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
   system("cls");
   clearCon();
   printf("Suda's App Menu\r\n");
-  printf(readFile("conf/motd.txt"));
+  printf(readMotd());
   printf("Memory Info:\r\n");
   runProc("mem");
   printf("Please select an application:\r\n");
