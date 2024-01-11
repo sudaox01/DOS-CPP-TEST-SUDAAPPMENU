@@ -11,11 +11,6 @@
 
 int main(int argc, char *argv[])
 {
-  asm {
-    mov dl, 21h
-    mov ah, 02h
-    int 21h
-  }
   char conf_name[256] = "conf";
   char motd_conf_name[256] = "motd.txt";
   struct stat cs;
@@ -24,6 +19,7 @@ int main(int argc, char *argv[])
   //mkdir(dir_name);
   int appNum;
   int siNum;
+  system("cls");
   clearCon();
   printf("Suda's App Menu\r\n");
   printf(readFile("conf/motd.txt"));
@@ -72,6 +68,7 @@ int main(int argc, char *argv[])
     }
     if(siNum == 1) {
       // About
+      system("cls");
       aboutPagePrint();
       main(0, 0);
       return 0;
