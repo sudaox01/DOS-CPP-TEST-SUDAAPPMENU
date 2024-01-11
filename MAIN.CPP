@@ -1,3 +1,4 @@
+#include <dos.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream.h>
@@ -10,6 +11,11 @@
 
 int main(int argc, char *argv[])
 {
+  asm {
+    mov dl, 21h
+    mov ah, 02h
+    int 21h
+  }
   char conf_name[256] = "conf";
   char motd_conf_name[256] = "motd.txt";
   struct stat cs;
@@ -33,18 +39,21 @@ int main(int argc, char *argv[])
   if(appNum == 1) {
     //Edit app
     runProc("edit");
+    system("cls"); // Due to weirdness with screen clearinigg
     main(0, 0);
     return 0;
   }
   if(appNum == 2) {
     //Turbo C++
     runProc("tc");
+    system("cls"); // Due to weirdness with screen clearinigg
     main(0, 0);
     return 0;
   }
   if(appNum == 3) {
     //QBasic
     runProc("qbasic");
+    system("cls"); // Due to weirdness with screen clearinigg
     main(0, 0);
     return 0;
   }

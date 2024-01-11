@@ -1,11 +1,13 @@
 #include <iostream.h>
 #include "ABOUT.H"
+#include "CONSOLE.H"
 
 //extern void _testcall();
 //_testcall();
 int aboutPagePrint() {
   system("cls");
-  printf(testcall());
+  clearCon();
+  //printf(testcall());f
   printf("===== About =====\r\n");
   printf("Suda's App Menu\r\n");
   printf("Created 2024 by Lucy Zukor using Turbo C++ 3.0\r\n");
